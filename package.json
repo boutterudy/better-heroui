@@ -1,0 +1,50 @@
+{
+  "name": "better-heroui",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": "./styles/index.css"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "prettier --write ."
+  },
+  "packageManager": "pnpm@10.32.1",
+  "engines": {
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm"
+  },
+  "peerDependencies": {
+    "next": ">=16",
+    "react": ">=19",
+    "react-dom": ">=19",
+    "tailwindcss": ">=4"
+  },
+  "dependencies": {
+    "@hcaptcha/react-hcaptcha": "^2.0.2",
+    "@heroui/react": "^3.0.2",
+    "@phosphor-icons/react": "^2.1.10",
+    "libphonenumber-js": "^1.12.41",
+    "tailwind-merge": "^3.5.0",
+    "tailwind-variants": "^3.2.2",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8",
+    "@typescript-eslint/parser": "^8",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-plugin-react": "^7",
+    "eslint-plugin-react-hooks": "^5",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "typescript": "^5"
+  }
+}

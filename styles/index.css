@@ -1,0 +1,171 @@
+@theme {
+  /* Breakpoints */
+  --breakpoint-desktop: 900px;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem; /* 4px  */
+  --spacing-s: 0.5rem; /* 8px  */
+  --spacing-m: 1rem; /* 16px */
+  --spacing-l: 1.5rem; /* 24px */
+  --spacing-xl: 2.5rem; /* 40px */
+  --spacing-xxl: 3.5rem; /* 56px */
+  --spacing-3xl: 4rem; /* 64px */
+  --spacing-4xl: 6rem; /* 96px */
+
+  /* Radius */
+  --radius-section-image: 74px;
+
+  /* Navbar logo height (override to match your logo's rendered height) */
+  --navbar-logo-height: 126px;
+}
+
+@layer utilities {
+  :root {
+    --navbar-height: 64px;
+  }
+
+  [id] {
+    scroll-margin-top: var(--navbar-height);
+  }
+}
+
+/* Button override — takes precedence over @layer components */
+.button {
+  @apply h-auto rounded-xl px-5 py-2;
+}
+
+/* Content width */
+.container {
+  @apply mx-auto w-full;
+
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (width >= theme(--breakpoint-desktop)) {
+    max-width: 810px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
+}
+
+/* ─── Shared image utilities ─────────────────────────────────────────────── */
+
+@utility image-mobile-max-h {
+  max-height: 35vh;
+  width: auto;
+}
+
+/* ─── Typography scale ───────────────────────────────────────────────────── */
+
+/* Display */
+@utility display-large {
+  font-size: 6rem;
+  line-height: 7rem;
+  font-weight: 700;
+}
+@utility display-medium {
+  font-size: 3.25rem;
+  line-height: 4rem;
+  font-weight: 700;
+}
+@utility display-small {
+  font-size: 2.75rem;
+  line-height: 3.25rem;
+  font-weight: 700;
+}
+@utility display-xsmall {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+}
+
+/* Heading */
+@utility heading-xxlarge {
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  font-weight: 700;
+}
+@utility heading-xlarge {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+}
+@utility heading-large {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+@utility heading-medium {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+@utility heading-small {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+@utility heading-xsmall {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+/* Label */
+@utility label-large {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+@utility label-medium {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+@utility label-small {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-weight: 500;
+}
+@utility label-xsmall {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+}
+
+/* Paragraph */
+@utility paragraph-large {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+@utility paragraph-medium {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+@utility paragraph-small {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+@utility paragraph-xsmall {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
