@@ -1,7 +1,11 @@
 {
   "name": "better-heroui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
+  "files": [
+    "dist",
+    "styles"
+  ],
   "exports": {
     ".": {
       "import": "./dist/index.js",
