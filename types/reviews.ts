@@ -17,3 +17,13 @@ export type Review = {
   | { rating: number; title?: undefined }
   | { rating?: undefined; title?: string }
 );
+
+export type ReviewsMetrics = {
+  totalCount: number;
+  averageRating: number;
+  recommendationPercent: number;
+  bySource: {
+    google?: { count: number; averageRating: number };
+    facebook?: { count: number; recommendationPercent: number };
+  };
+};

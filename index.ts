@@ -1,5 +1,12 @@
 export { Navigation } from './components/Navigation/Navigation';
 
+export type {
+  ReviewSource,
+  ReviewAuthor,
+  Review,
+  ReviewsMetrics,
+} from './types/reviews';
+
 export { Footer } from './components/Footer/Footer';
 export type { FooterLink } from './components/Footer/Footer';
 

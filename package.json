@@ -17,7 +17,10 @@
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "lint:fix": "prettier --write ."
+    "lint:fix": "prettier --write .",
+    "release:patch": "pnpm run lint && pnpm run build && pnpm version patch && pnpm publish",
+    "release:minor": "pnpm run lint && pnpm run build && pnpm version minor && pnpm publish",
+    "release:major": "pnpm run lint && pnpm run build && pnpm version major && pnpm publish"
   },
   "packageManager": "pnpm@10.32.1",
   "engines": {
